@@ -1,0 +1,23 @@
+.error-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.error-box {
+  background-color: #fee;
+  border: 2px solid #c33;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 500px;
+  text-align: center;
+}
+
+.error-box h3 {
+  color: #c33;
+  margin-bottom: 0.5rem;
+}
+
+.error-box p {
+  color: #666;
+}

@@ -1,0 +1,10 @@
+.task-details-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.task-details-container h1 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}

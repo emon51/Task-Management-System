@@ -1,10 +1,25 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import TaskList from './pages/TaskList';
+import TaskDetails from './pages/TaskDetails';
+import NotFound from './pages/NotFound';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Welcome to Task Manager!</h1>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/tasks" element={<TaskList />} />
+          <Route path="/tasks/:id" element={<TaskDetails />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
