@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <nav className={`navbar ${isDarkMode ? 'dark' : 'light'}`}>
       <div className="navbar-container">
-        <h2 className="navbar-logo">Task Manager</h2>
+        <h2 className="navbar-logo">Task Management System</h2>
         <ul className="navbar-menu">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/tasks">Tasks</Link></li>
