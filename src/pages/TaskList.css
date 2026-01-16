@@ -6,7 +6,6 @@
 
 .task-list-container h1 {
   margin-bottom: 2rem;
-  color: #333;
   text-align: center;
 }
 
@@ -17,19 +16,30 @@
 }
 
 .task-card {
-  background-color: #f9f9f9;
-  border: 2px solid #ddd;
   border-radius: 8px;
   padding: 1.5rem;
   text-decoration: none;
-  color: inherit;
   transition: transform 0.2s, box-shadow 0.2s;
   cursor: pointer;
 }
 
+/* Light mode - white card background, black text */
+.task-list-container.light .task-card {
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  color: #000000;
+}
+
+/* Dark mode - dark card background, white text */
+.task-list-container.dark .task-card {
+  background-color: #1e1e1e;
+  border: 2px solid #333333;
+  color: #ffffff;
+}
+
 .task-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .task-status {
@@ -54,14 +64,13 @@
 }
 
 .task-card h3 {
-  color: #333;
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
   line-height: 1.4;
 }
 
 .task-id {
-  color: #888;
   font-size: 0.9rem;
   margin-top: 0.5rem;
+  opacity: 0.7;
 }

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { useTheme } from '../context/ThemeContext';
 import Loader from '../components/Loader';
 import ErrorMessage from '../components/ErrorMessage';
 import './TaskDetails.css';
 
 function TaskDetails() {
+  const { isDarkMode } = useTheme();
   const { id } = useParams(); // Get task ID from URL
   const [task, setTask] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -41,7 +43,7 @@ function TaskDetails() {
   }
 
   return (
-    <div className="task-details-container">
+    <div className={`task-details-container ${isDarkMode ? 'dark' : 'light'}`}>
       <Link to="/tasks" className="back-button">← Back to Tasks</Link>
       
       <div className="task-details-card">

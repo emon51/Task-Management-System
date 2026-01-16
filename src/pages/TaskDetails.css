@@ -6,28 +6,58 @@
 
 .back-button {
   display: inline-block;
-  color: #333;
   text-decoration: none;
   font-size: 1rem;
   margin-bottom: 2rem;
   padding: 0.5rem 1rem;
-  border: 2px solid #ddd;
   border-radius: 5px;
   transition: all 0.3s;
 }
 
-.back-button:hover {
-  background-color: #333;
-  color: white;
-  border-color: #333;
+/* Light mode back button */
+.task-details-container.light .back-button {
+  color: #000000;
+  border: 2px solid #e0e0e0;
+  background-color: #ffffff;
+}
+
+.task-details-container.light .back-button:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+/* Dark mode back button */
+.task-details-container.dark .back-button {
+  color: #ffffff;
+  border: 2px solid #333333;
+  background-color: #1e1e1e;
+}
+
+.task-details-container.dark .back-button:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
 }
 
 .task-details-card {
-  background-color: #f9f9f9;
-  border: 2px solid #ddd;
   border-radius: 10px;
   padding: 2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Light mode card */
+.task-details-container.light .task-details-card {
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  color: #000000;
+}
+
+/* Dark mode card */
+.task-details-container.dark .task-details-card {
+  background-color: #1e1e1e;
+  border: 2px solid #333333;
+  color: #ffffff;
 }
 
 .task-header {
@@ -36,13 +66,28 @@
   align-items: center;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid #ddd;
+}
+
+.task-details-container.light .task-header {
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.task-details-container.dark .task-header {
+  border-bottom: 2px solid #333333;
 }
 
 .task-header h1 {
-  color: #333;
   font-size: 2rem;
   margin: 0;
+}
+
+/* Ensure h1 inherits text color from parent */
+.task-details-container.light .task-header h1 {
+  color: #000000;
+}
+
+.task-details-container.dark .task-header h1 {
+  color: #ffffff;
 }
 
 .task-badge {
@@ -74,18 +119,46 @@
   display: flex;
   gap: 1rem;
   padding: 1rem;
-  background-color: white;
   border-radius: 5px;
-  border-left: 4px solid #333;
+}
+
+/* Light mode info rows */
+.task-details-container.light .info-row {
+  background-color: #f5f5f5;
+  border-left: 4px solid #000000;
+  color: #000000;
+}
+
+/* Dark mode info rows */
+.task-details-container.dark .info-row {
+  background-color: #0a0a0a;
+  border-left: 4px solid #61dafb;
+  color: #ffffff;
 }
 
 .info-label {
   font-weight: bold;
-  color: #555;
   min-width: 120px;
 }
 
+/* Ensure labels have correct color */
+.task-details-container.light .info-label {
+  color: #000000;
+}
+
+.task-details-container.dark .info-label {
+  color: #ffffff;
+}
+
 .info-value {
-  color: #333;
   flex: 1;
+}
+
+/* Ensure values have correct color */
+.task-details-container.light .info-value {
+  color: #000000;
+}
+
+.task-details-container.dark .info-value {
+  color: #ffffff;
 }

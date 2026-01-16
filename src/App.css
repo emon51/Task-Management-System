@@ -8,9 +8,22 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  margin: 0;
 }
 
 .App {
   min-height: 100vh;
-  background-color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light theme - light background, black text */
+.App.light-theme {
+  background-color: #f0f0f0;
+  color: #000000;
+}
+
+/* Dark theme - dark background, white text */
+.App.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
 }

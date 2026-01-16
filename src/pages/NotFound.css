@@ -10,30 +10,43 @@
 
 .notfound-container h1 {
   font-size: 6rem;
-  color: #333;
   margin-bottom: 1rem;
 }
 
 .notfound-container h2 {
   font-size: 2rem;
-  color: #666;
   margin-bottom: 1rem;
 }
 
 .notfound-container p {
-  color: #888;
   margin-bottom: 2rem;
+  opacity: 0.8;
 }
 
 .home-link {
-  background-color: #333;
-  color: white;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  font-weight: bold;
+  transition: all 0.3s;
 }
 
-.home-link:hover {
-  background-color: #555;
+/* Light mode link */
+.notfound-container.light .home-link {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.notfound-container.light .home-link:hover {
+  background-color: #333333;
+}
+
+/* Dark mode link */
+.notfound-container.dark .home-link {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.notfound-container.dark .home-link:hover {
+  background-color: #e0e0e0;
 }

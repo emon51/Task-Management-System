@@ -1,9 +1,12 @@
 import React from 'react';
+import { useTheme } from '../context/ThemeContext';
 import './Home.css';
 
 function Home() {
+  const { isDarkMode } = useTheme();
+
   return (
-    <div className="home-container">
+    <div className={`home-container ${isDarkMode ? 'dark' : 'light'}`}>
       <h1>Welcome to Task Manager</h1>
       <p className="home-description">
         A simple and efficient task management application built with React.

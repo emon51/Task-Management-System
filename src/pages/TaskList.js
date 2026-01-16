@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTheme } from '../context/ThemeContext';
 import Loader from '../components/Loader';
 import ErrorMessage from '../components/ErrorMessage';
 import './TaskList.css';
 
 function TaskList() {
+  const { isDarkMode } = useTheme();
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -39,7 +41,7 @@ function TaskList() {
   }
 
   return (
-    <div className="task-list-container">
+    <div className={`task-list-container ${isDarkMode ? 'dark' : 'light'}`}>
       <h1>Task List</h1>
       <div className="tasks-grid">
         {tasks.map(task => (
