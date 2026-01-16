@@ -105,6 +105,14 @@
   font-size: 0.85rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+  user-select: none;
+}
+
+.task-status:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
 }
 
 .task-status.completed {

@@ -33,6 +33,16 @@ function TaskList() {
       });
   }, []);
 
+  // Toggle task completion status
+  const toggleTaskStatus = (taskId, e) => {
+    e.preventDefault(); // Prevent navigation to task details
+    setTasks(prevTasks =>
+      prevTasks.map(task =>
+        task.id === taskId ? { ...task, completed: !task.completed } : task
+      )
+    );
+  };
+
   // Filter tasks based on search term
   const filteredTasks = tasks.filter(task =>
     task.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -89,7 +99,10 @@ function TaskList() {
         <div className="tasks-grid">
           {currentTasks.map(task => (
             <Link to={`/tasks/${task.id}`} key={task.id} className="task-card">
-              <div className={`task-status ${task.completed ? 'completed' : 'pending'}`}>
+              <div 
+                className={`task-status ${task.completed ? 'completed' : 'pending'}`}
+                onClick={(e) => toggleTaskStatus(task.id, e)}
+              >
                 {task.completed ? '✓ Done' : '○ Pending'}
               </div>
               <h3>{task.title}</h3>
