@@ -32,6 +32,14 @@ function TaskDetails() {
       });
   }, [id]);
 
+  // Toggle task completion status
+  const toggleTaskStatus = () => {
+    setTask(prevTask => ({
+      ...prevTask,
+      completed: !prevTask.completed
+    }));
+  };
+
   // Show loader while fetching
   if (loading) {
     return <Loader />;
@@ -49,7 +57,10 @@ function TaskDetails() {
       <div className="task-details-card">
         <div className="task-header">
           <h1>Task Details</h1>
-          <span className={`task-badge ${task.completed ? 'completed' : 'pending'}`}>
+          <span 
+            className={`task-badge ${task.completed ? 'completed' : 'pending'}`}
+            onClick={toggleTaskStatus}
+          >
             {task.completed ? '✓ Completed' : '○ Pending'}
           </span>
         </div>
