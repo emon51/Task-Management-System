@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTheme } from '../context/ThemeContext';
 import './Home.css';
+import taskImage from '../assets/taskmanager-logo.jpg';
 
 function Home() {
   const { isDarkMode } = useTheme();
@@ -11,14 +12,12 @@ function Home() {
       <p className="home-description">
         A simple and efficient task management application built with React.
       </p>
-      <div className="home-features">
-        <h2>Features:</h2>
-        <ul>
-          <li>📋 View all your tasks</li>
-          <li>🔍 Search and filter tasks</li>
-          <li>✅ Track completed tasks</li>
-          <li>🌓 Light/Dark mode support</li>
-        </ul>
+      <div className="home-image-container">
+        <img 
+          src={taskImage} 
+          alt="Task Management" 
+          className="home-image"
+        />
       </div>
     </div>
   );
