@@ -9,10 +9,66 @@
   text-align: center;
 }
 
+/* Search Bar */
+.search-container {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.task-list-container.light .search-input {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #e0e0e0;
+}
+
+.task-list-container.dark .search-input {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border-color: #333333;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #61dafb;
+}
+
+.search-input::placeholder {
+  opacity: 0.6;
+}
+
+/* Task Count */
+.task-count {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  opacity: 0.7;
+}
+
+/* No Tasks Message */
+.no-tasks {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+/* Tasks Grid */
 .tasks-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .task-card {
@@ -73,4 +129,55 @@
   font-size: 0.9rem;
   margin-top: 0.5rem;
   opacity: 0.7;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.pagination-btn {
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  border: 2px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.task-list-container.light .pagination-btn {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #e0e0e0;
+}
+
+.task-list-container.dark .pagination-btn {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border-color: #333333;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background-color: #61dafb;
+  color: #000000;
+  border-color: #61dafb;
+  transform: translateY(-2px);
+}
+
+.pagination-btn.active {
+  background-color: #61dafb;
+  color: #000000;
+  border-color: #61dafb;
+  font-weight: bold;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
