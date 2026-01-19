@@ -66,12 +66,14 @@ npm run build
 [JSONPlaceholder](https://jsonplaceholder.typicode.com/todos?_limit=200) 
 
 ## ScreenShots
-<img src="screenshots/scs1.png" width="1000">
+<img src="screenshots/scs1.png" width="1200">
 <hr>
-<img src="screenshots/scs2.png" width="1000">
+<img src="screenshots/scs2.png" width="1200">
 <hr>
-<img src="screenshots/scs3.png" width="1000">
+<img src="screenshots/scs3.png" width="1200">
 <hr>
-<img src="screenshots/scs4.png" width="1000">
+<img src="screenshots/scs4.png" width="1200">
+<hr>
+<img src="screenshots/scs5.png" width="1200">
 
 
