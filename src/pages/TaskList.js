@@ -12,11 +12,11 @@ function TaskList() {
   const [error, setError] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const tasksPerPage = 6;
+  const tasksPerPage = 20;
 
   // Fetch tasks from API
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/todos?_limit=20')
+    fetch('https://jsonplaceholder.typicode.com/todos?_limit=200')
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch tasks');
