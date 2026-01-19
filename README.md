@@ -23,6 +23,58 @@ A simple task management application built with React that allows users to view,
 - CSS3
 - JSONPlaceholder API
 
+  
+## Project Structure
+```
+taskmanager/
+│
+├── public/                       
+│   └── index.html              
+│
+├── screenshots/                 
+│   ├── scs1.png
+│   ├── scs2.png
+│   ├── scs3.png
+│   ├── scs4.png
+│   └── scs5.png
+│
+├── src/                         
+│   ├── assets/                  
+│   │   └── taskmanager-logo.jpg
+│   │
+│   ├── components/              
+│   │   ├── ErrorMessage.css
+│   │   ├── ErrorMessage.js
+│   │   ├── Loader.css
+│   │   ├── Loader.js
+│   │   ├── Navbar.css
+│   │   └── Navbar.js
+│   │
+│   ├── context/                 
+│   │   └── ThemeContext.js
+│   │
+│   │
+│   ├── pages/                 
+│   │   ├── Home.css
+│   │   ├── Home.js
+│   │   ├── NotFound.css
+│   │   ├── NotFound.js
+│   │   ├── TaskDetails.css
+│   │   ├── TaskDetails.js
+│   │   ├── TaskList.css
+│   │   └── TaskList.js
+│   │
+│   ├── App.css                  
+│   ├── App.js                   
+│   ├── index.css                
+│   └── index.js                
+│
+├── .gitignore                   
+├── package-lock.json           
+├── package.json                 
+└── README.md                    
+```
+
 ## Installation
 ### 1. Clone repository
 ```
