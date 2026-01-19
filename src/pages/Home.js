@@ -8,7 +8,7 @@ function Home() {
 
   return (
     <div className={`home-container ${isDarkMode ? 'dark' : 'light'}`}>
-      <h1>Welcome to Task Manager</h1>
+      <h1>Welcome to your task world. Manage your tasks with ease.</h1>
       <p className="home-description">
         A simple and efficient task management application built with React.
       </p>
