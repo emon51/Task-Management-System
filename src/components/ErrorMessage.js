@@ -8,7 +8,7 @@ function ErrorMessage({ message }) {
   return (
     <div className={`error-container ${isDarkMode ? 'dark' : 'light'}`}>
       <div className="error-box">
-        <h3>⚠️ Error</h3>
+        <h3>404</h3>
         <p>{message || 'Something went wrong. Please try again.'}</p>
       </div>
     </div>

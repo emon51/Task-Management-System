@@ -18,7 +18,7 @@ function TaskDetails() {
     fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
       .then(response => {
         if (!response.ok) {
-          throw new Error('Failed to fetch task details');
+          throw new Error('Task Not Found');
         }
         return response.json();
       })
