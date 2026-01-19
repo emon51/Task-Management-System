@@ -10,8 +10,8 @@ A simple task management application built with React that allows users to view,
 
 - View list of tasks
 - Search tasks by title
-- Pagination (6 tasks per page)
-- Toggle task status (Pending ↔ Completed)
+- Pagination (20 tasks per page)
+- Toggle task status (Pending <==> Completed)
 - Dark/Light mode theme
 - Responsive design
 
@@ -56,3 +56,11 @@ http://localhost:3000
 - **Task Details**: Click any task to view details
 - **Theme Toggle**: Click moon/sun icon in navbar
 - **Status Toggle**: Click status badge to toggle Pending/Completed
+
+## Build for Production
+```
+npm run build
+```
+
+## API Used for demo data
+[JSONPlaceholder](https://jsonplaceholder.typicode.com/todos?_limit=200) 
